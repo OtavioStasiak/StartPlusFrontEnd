@@ -1,3 +1,5 @@
+import { Container, TextInput } from "./styles";
+
 type Props = {
     title: string;
     placeholder: string;
@@ -5,9 +7,9 @@ type Props = {
 
 export function Input({title, placeholder}: Props){
     return(
-        <div>
+        <Container>
             <label>{title}</label>
-            <input placeholder={placeholder} type="input" /> 
-        </div>
+            <TextInput placeholder={placeholder} type="input" /> 
+        </Container>
     )
 }

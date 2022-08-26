@@ -1,5 +1,7 @@
 import { Input } from "../../components/Input";
-import { Container, Content } from "./styles";
+import logoImg from '../../assets/Frame.png';
+import { CheckBox, Container, Content } from "./styles";
+import { SignInButton } from "../../components/SignInButton";
 
 export function SignIn(){
 
@@ -7,16 +9,20 @@ export function SignIn(){
         <Container>
             
             <Content>
-                <img src="" alt="Start Plus Logo"/>
+                <img src={logoImg} alt="Start Plus Logo"/>
                 <Input placeholder="Email" title="E-mail"/>
                 <Input placeholder="Senha" title="Senha"/>
                 <a>Esqueceu a senha</a>
 
-                <button type="button">
-                    Login
-                </button>
 
-                <span>Não tem uma conta? Crie agora! <a>Criar conta</a></span>
+                <CheckBox>
+                    <input type="checkbox" />
+                    <label>Mantenha-me Conectado</label>
+                </CheckBox>
+                <SignInButton title="Login" />
+                
+ 
+                <span>Não tem uma conta?<a> Crie agora!</a></span>
             </Content>
 
         </Container>
