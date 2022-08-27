@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     };
 
     &::-webkit-scrollbar-thumb{
-        background: #49E9FF;
+        background: #27546D;
         width: 5px;
         height: 10px !important;
         border-radius: 5px;
@@ -66,11 +66,8 @@ export const GlobalStyles = createGlobalStyle`
     };
 
     h2 {
-        color: #000;
-        font-size: 3rem;
-        padding-left: 3rem; 
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
+        color: #696969;
+        font-size: 1.5rem;
     };
 
     button {
@@ -81,4 +78,31 @@ export const GlobalStyles = createGlobalStyle`
         opacity: 0.6;
         cursor: not-allowed;
     };
+
+    .react-modal-overlay{
+        background: rgba(0,0,0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out .2s;
+    };
+    .react-modal-content{
+        
+    }
+    .react-modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        border: 0;
+        background: transparent;
+        transition: 0.2s;
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
 `
