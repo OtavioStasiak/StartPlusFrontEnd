@@ -1,6 +1,6 @@
 import { Input } from "../../components/Input";
 import logoImg from '../../assets/Frame.png';
-import {  Container, Content } from "./styles";
+import {  Container, Content, InputDiv, InputDivII } from "./styles";
 import { SignInButton } from "../../components/SignInButton";
 import { useState } from "react";
 import 'react-phone-number-input/style.css'
@@ -26,15 +26,20 @@ export function SignUp(){
                 <Input placeholder="Username" title="Username"/>
                 <Input placeholder="E-mail" title="E-mail" />
                 <Input placeholder="Convite" title="Convite" />
-                <PhoneInput
-                 style={{width: '80%', height: '15%', }}
-                 defaultCountry="BR"
-                 placeholder="Enter phone number"
-                 value={value}
-                 onChange={(value) => {if(value !== undefined){setValue(value)}}}
-                />
+
+                <InputDivII>
+                    <label>Telefone</label>
+                    <PhoneInput 
+                    defaultCountry="BR"
+                    placeholder="Número de Telefone"
+                    value={value}
+                    onChange={(value) => {if(value !== undefined){setValue(value)}}}
+                    />
+                </InputDivII>
+
+                <InputDiv>
                     <label>Senha</label>
-                    <InputGroup width={'82%'} height={'8.5%'} borderColor={'#c8c8c8'}>
+                    <InputGroup width={'90%'} height={'8.5%'} borderColor={'#c8c8c8'}>
                         <ChakraInput
                             pr='4.5rem'
                             type={show ? 'text' : 'password'}
@@ -46,9 +51,10 @@ export function SignUp(){
                             </Button>
                         </InputRightElement>
                     </InputGroup>
-
+                </InputDiv>
+                <InputDiv>
                     <label>Confirmar Senha</label>
-                    <InputGroup width={'80%'} borderColor={'#c8c8c8'}>
+                    <InputGroup width={'90%'} borderColor={'#c8c8c8'}>
                         <ChakraInput
                             pr='4.5rem'
                             type={show ? 'text' : 'password'}
@@ -60,6 +66,7 @@ export function SignUp(){
                             </Button>
                         </InputRightElement>
                     </InputGroup>
+                </InputDiv>
                 </div>
                 <SignInButton title="CADASTRE-SE" onClick={() => setSecondStage(true)} />     
     
